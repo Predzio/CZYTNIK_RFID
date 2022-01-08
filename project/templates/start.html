@@ -1,0 +1,49 @@
+{% extends "bootstrap.html" %}
+{% block title %}
+Access Control
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href={{url_for('main_page')}}>Kontrola dostępu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+
+
+
+        <form class="row g-3" style="margin-top: 20px;" action={{url_for('db_control_panel')}}>
+  <div class="col-auto">
+    <label for="login" class="visually-hidden" ></label>
+    <input type="text" class="form-control" name="login" id="login" placeholder="Input your login here">
+  </div>
+  <div class="col-auto">
+    <label for="password" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" name="password" id="password" placeholder="Input your password here" >
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Zaloguj</button>
+  </div>
+</form>
+
+
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+{% endblock %}
